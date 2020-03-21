@@ -25,7 +25,9 @@
 
 		if(mysqli_query($conn, $sql))
 		{
-			echo "success <br> <a href ='index.php'>Back Home</a>";
+			//echo "success <br> <a href ='index.php'>Back Home</a>";
+			header('Location: index.php');
+
 		}
 		else
 		{
