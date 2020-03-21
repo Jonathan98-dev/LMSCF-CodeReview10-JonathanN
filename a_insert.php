@@ -33,4 +33,7 @@
 		}
 
 	}
+
+	// closing connection 
+	mysqli_close($conn);
 ?>

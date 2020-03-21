@@ -1,0 +1,74 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("books.png"); }
+
+.header {
+  background-color: white;
+  border-bottom: 5px solid indianred;
+  display: flex;
+  width: 100vw; }
+  .header p {
+    font-size: 2em;
+    font-weight: 300;
+    width: 50vw;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    text-decoration: none; }
+  .header button {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3em;
+    align-self: center;
+    margin: auto;
+    transition: 0.3s; }
+    .header button:hover {
+      background-color: palegreen; }
+    .header button:hover {
+      padding: 1em; }
+    .header button a {
+      text-decoration: none;
+      font-size: 1.3em; }
+
+.container {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 15px grey;
+  padding: 3em;
+  width: 80vw;
+  margin: auto;
+  margin-top: 3em; }
+  .container .media {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .container .media .onemedia {
+      padding: 2%;
+      border-radius: 5px;
+      width: 40%;
+      background-color: white;
+      margin: 1em 0em 1em 0em;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transition: 0.1s; }
+      .container .media .onemedia:hover {
+        transform: scale(1.005); }
+      .container .media .onemedia a {
+        text-decoration: none;
+        color: grey;
+        text-shadow: 0px 0px 1px white;
+        transition: 0.3s; }
+        .container .media .onemedia a:hover {
+          transform: scale(1.1); }
+      .container .media .onemedia img {
+        box-shadow: 1px 1px 15px grey;
+        margin: auto; }
+
+/*# sourceMappingURL=indexstyle.css.map */

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Insert new Media</title>
 </head>
 <body>
+	
+	<a href='index.php'>Back home</a><br><br>
+
 	<form action="a_insert.php" method="post">
 		<input type="text" name="title" placeholder="Title"><br>
 		<input type="text" name="imagelink" placeholder="Image URL"><br>

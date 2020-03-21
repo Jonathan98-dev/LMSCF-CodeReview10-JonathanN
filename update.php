@@ -1,6 +1,6 @@
 <?php  
 	require_once("db_connect.php");
-
+	echo "<a href='index.php'>Back Home</a><br><br>";
 //gets data from database (media) where id = $id
 
 	if($_GET["id"])
@@ -20,7 +20,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Update Media</title>
 </head>
 <body>
 
