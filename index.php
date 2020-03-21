@@ -26,12 +26,11 @@
 		elseif($result->num_rows == 1)
 		{
 			$row = $result->fetch_assoc();
-
-		//change!!!!
 			
-			$img=$row["imagelink"];
-			$imgdata = base64_encode(file_get_contents($img));
-			echo $row["id"]." ".$row["title"]." "."<img style = 'width:50px' src='data:image/jpeg;base64,".$imgdata."'>"."<br>";
+			// $img=$row["imagelink"];
+			// $imgdata = base64_encode(file_get_contents($img));
+
+			echo $row["id"]." | ". $row["type"]." | ". $row["Author"] ."<br>"."<img style='width: 100px' src ='".$row["imagelink"]."'>  "."<br>"."<a href ='update.php?id=".$row["id"]."'>Change</a><br>"."<a href ='delete.php?id=".$row["id"]."'>Delete</a><br>"."<hr>";
 		}
 		else
 		{
@@ -39,14 +38,12 @@
 			foreach ($rows as $key => $value) 
 			{
 
-			//for trying to display images from imagelink
+			//for trying to display images better from imagelink (didnt work)
 
 				// $image = $value["imagelink"];
 				// $imagedata = base64_encode(file_get_contents($image));
 
-				echo $value["id"]." | ".$value["Title"]." | "."<br>"."<img src ='".$value["imagelink"]."'>  ". "<br>";
-
-
+				echo $value["id"]." | ". $value["type"]." | ".$value["Title"]." by ". $value["Author"] ."<br><br>"."<img style='width: 100px' src ='".$value["imagelink"]."'>  ". "<br>"."<a href ='update.php?id=".$value["id"]."'>Change</a><br>"."<a href ='delete.php?id=".$value["id"]."'>Delete</a><br>"."<hr>";
 			}
 		}
 

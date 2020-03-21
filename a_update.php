@@ -1,13 +1,12 @@
-<?php  
+<?php 
+
 	require_once("db_connect.php");
-	
-//Coming from post mehtod code wil be run
+
+//gets information from input for updating table row
 
 	if($_POST)
 	{
-
-	//saving userinput in variables
-
+		$id = $_POST["id"];
 		$title= $_POST["title"];
 		$imagelink= $_POST["imagelink"];
 		$author= $_POST["author"];
@@ -16,11 +15,9 @@
 		$publisher= $_POST["publisher"];
 		$type= $_POST["type"];
 
-	//query to insert userinput into table
-
 		$sql = "
-				INSERT INTO `media`( `Title`, `imagelink`, `Author`, `description`, `publishdate`, `publisher`, `type`)
-				VALUES ('$title','$imagelink','$author','$description','$publishdate','$publisher','$type');
+				UPDATE `media` SET `Title`='$title',`imagelink`='$imagelink',`Author`='$author',`description`='$description',`publishdate`='$publishdate',`publisher`='$publisher',`type`='$type' 
+				WHERE id = $id;
 				";
 
 		if(mysqli_query($conn, $sql))
@@ -31,6 +28,5 @@
 		{
 			echo "error";
 		}
-
 	}
 ?>
